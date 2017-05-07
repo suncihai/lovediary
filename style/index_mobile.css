@@ -1,0 +1,32 @@
+#shelter{
+	height:600px;
+}
+
+.shelters{
+	height:200px;
+	position:relative;
+}
+
+#shelter_above_board{
+	width:100%;
+	height:25px;
+	background: url(../images/shelter_above.png) center no-repeat;
+	position:absolute;
+	bottom:10px;
+}
+
+#shelter_middle_board{
+	width:100%;
+	height:25px;
+	background: url(../images/shelter_middle.png) center no-repeat;
+	position:absolute;
+	bottom:10px;
+}
+
+#shelter_below_board{
+	width:100%;
+	height:25px;
+	background: url(../images/shelter_below.png) center no-repeat;
+	position:absolute;
+	bottom:10px;
+}
