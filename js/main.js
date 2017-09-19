@@ -359,7 +359,7 @@ $(document).ready(function($) {
     loadData();
 
     postArray.sort(function(a,b){
-        return getDateNum(b.posted) - getDateNum(a.posted);
+        return getDateNum(a.posted) - getDateNum(b.posted);
     })
 
     //converse the item_published form to comparable form
