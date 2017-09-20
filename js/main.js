@@ -324,7 +324,7 @@ $(document).ready(function($) {
             "post_date":"5月20日",
             "title":"吃鱼",
             "text": "今天和宝宝聊了好多属于我们俩个之间的暗语，小蜜蜂啊，吃黄鱼啊之类的，还真的是挺有情趣的，一想到宝宝可爱地说出这些话，就觉得好幸福啊~宝宝的520贺卡也真的稳稳地戳中了我的泪点，宝宝的文笔比乖乖日记水平高太多了，乖乖感到好惭愧啊。想了一下，最近好久没有做过让宝宝感动的事情了，反而是宝宝一直在感动着乖乖，乖乖在想着以后在和宝宝生活相处中凭借着细节来感动宝宝吧。宝宝，我爱你~~（打这句话的时候，突然想起了宝宝以前在电话里柔情似水般的那句：辞海，我爱你。）",
-            "image_url": "images/01.jpg"
+            "image_url": "images/31.jpg"
         },
         "item_created": "2017-05-20 11:50:14",
     },
@@ -334,15 +334,17 @@ $(document).ready(function($) {
             "post_date":"5月22日",
             "title":"期待",
             "text": "听宝宝说宝宝开始转运了，可能乖乖是宝宝的幸运星吧~今天就一直在和宝宝讨论去日本旅游的事情，我们很麻利地订好了行程和安排。宝宝说她很想尝试日本的民宿，然后就推荐了我airbnb，我用了下感觉很好的，看来这次宝宝也是很给力啊~~最近要开始看日本攻略啦~~对啦不要忘记去办日本签证哇~",
-            "image_url": "images/02.jpg"
+            "image_url": "images/32.jpg"
         },
         "item_created": "2017-05-22 11:50:14",
     }
     ];
 
+    var post_length = items.length
+
     function loadData(){
         var index=0;
-        while(index<32){
+        while(index<post_length){
            var obj = new Object();
            
            obj.date = items[index]["item_data"]["post_date"];
@@ -376,8 +378,8 @@ $(document).ready(function($) {
        return arr.join("");
     }
      
-    //first load 32 items
-    for(var i=0;i<32;i++){
+    //load posts
+    for(var i=0;i<post_length;i++){
         generatepost(i);
     }
     
