@@ -390,7 +390,7 @@ $(document).ready(function($) {
         newatag.setAttribute("class","example-image-link");
         newatag.setAttribute("href",postArray[i].image);
         newatag.setAttribute("data-lightbox","example-set");
-        newatag.setAttribute("data-title","Click the right half of the image to move forward.");
+        newatag.setAttribute("data-title","点击箭头切换图片");
  
         var newimg = document.createElement('img');
         newimg.setAttribute("class","example-image");
@@ -403,7 +403,7 @@ $(document).ready(function($) {
         newh3.setAttribute("class","title-item");
  
         var newatag1 = document.createElement('a');
-        newatag1.setAttribute("href",'single.html');
+        newatag1.setAttribute("href",'');
         newatag1.innerHTML=postArray[i].title;
 
         var newdiv2 = document.createElement('div');
@@ -413,16 +413,6 @@ $(document).ready(function($) {
         var newtext = document.createElement('p');
         newtext.innerHTML=postArray[i].text;
 
-        var newdiv3 = document.createElement('div');
-        newdiv3.setAttribute("class","bottom-item");
-
-        var newatag2 = document.createElement('a');
-        newatag2.setAttribute("href",'single.html');
-        newatag2.setAttribute("class",'btn btn-more');
-
-        var newicon = document.createElement('i');
-        newicon.setAttribute("class","fa fa-long-arrow-right");
-
         container.appendChild(newpostdiv);
         newpostdiv.appendChild(newatag);
         newatag.appendChild(newimg);
@@ -431,9 +421,6 @@ $(document).ready(function($) {
         newh3.appendChild(newatag1);
         newdiv.appendChild(newdiv2);
         newdiv.appendChild(newtext);
-        newpostdiv.appendChild(newdiv3);
-        newdiv3.appendChild(newatag2);
-        newatag2.appendChild(newicon);
     }
 
 
@@ -453,7 +440,9 @@ $(document).ready(function($) {
         $('#container').pinto("destroy");
     });
 
-    $('#container').pinto();
+    setTimeout(function(){
+          $('#container').pinto();
+    },10);
 
     setInterval(function(){
            var windowwidth = $(window).width();
