@@ -546,6 +546,7 @@ $(document).ready(function($) {
     $("#password").keyup(function(){
        if($(this).val()=="2017413518"){
           $(".password").fadeOut();
+          $('#container').removeClass("blurpage");
           $('html, body').css({
              overflow: 'auto',
              height: 'auto'

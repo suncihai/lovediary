@@ -94,6 +94,11 @@ header{text-align: center;}
 /* ----------------------------------Container--------------------------------- */
 /* ---------------------------------------------------------------------------- */
 .index-page, .sub-page {margin: 20px 10px 60px;}
+.blurpage{-webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);}
 #page-content .item {background-color: #fff;width:220px;box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.18);}
 .time{color: #999;font-size: 14px; border-bottom: 1px dashed #c9c9c9;width: 100%;margin-bottom: 10px;padding-bottom: 3px;}
 #page-content .item p.info{margin-top: 10px;}
