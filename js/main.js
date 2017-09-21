@@ -541,7 +541,22 @@ $(document).ready(function($) {
 
     setTimeout(function(){
           $('#container').pinto();
-    },10);
+    },100);
+
+    $("#password").keyup(function(){
+       if($(this).val()=="2017413518"){
+          $(".password").fadeOut();
+          $('html, body').css({
+             overflow: 'auto',
+             height: 'auto'
+          });
+       }
+    });
+
+    $('html, body').css({
+        overflow: 'hidden',
+        height: '100%'
+    });
 
     setInterval(function(){
            var windowwidth = $(window).width();
