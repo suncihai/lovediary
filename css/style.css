@@ -181,3 +181,13 @@ article h3{padding: 0;}
   width:100%;
   height:auto;
 }
+
+#person_image{
+  width:200px;
+}
+
+@media (max-width:500px){
+  #person_image{
+    width:80px;
+  }
+}
