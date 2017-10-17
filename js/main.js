@@ -654,7 +654,7 @@ $(document).ready(function($) {
           });
        }
     });
-    console.log(localStorage.getItem("password"));
+
     if(localStorage.getItem("password")=="passed"){
     	setTimeout(function(){
             $(".password").fadeOut();
