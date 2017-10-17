@@ -530,14 +530,14 @@ $(document).ready(function($) {
         "item_data": {
             "post_date":"10月02日",
             "title":"日常生活",
-            "text": "今天的日记是特别的一篇日记，记录着我的在纽约平常的一天是什么样子的。请点击这个链接跳吧。<br><br><a href='./single.html' style='color:#30a9f5;text-decoration:underline;'>点击查看</a>",
+            "text": "今天的日记是特别的一篇日记，记录着我的在纽约平常的一天是什么样子的。请点击这个链接跳转吧。<br><br><a href='./single.html' style='color:#30a9f5;text-decoration:underline;'>点击查看</a>",
             "image_url": "images/51.jpg"
         },
         "item_created": "2017-10-02 11:50:14",
     }
     ];
 
-    var post_length = items.length
+    var post_length = items.length;
 
     function loadData(){
         var index=0;
@@ -645,6 +645,7 @@ $(document).ready(function($) {
 
     $("#password").keyup(function(){
        if($(this).val()=="2017413518"){
+       	  localStorage.setItem("password","passed");
           $(".password").fadeOut();
           $('#container').removeClass("blurpage");
           $('html, body').css({
@@ -653,6 +654,17 @@ $(document).ready(function($) {
           });
        }
     });
+    console.log(localStorage.getItem("password"));
+    if(localStorage.getItem("password")=="passed"){
+    	setTimeout(function(){
+            $(".password").fadeOut();
+            $('#container').removeClass("blurpage");
+            $('html, body').css({
+              overflow: 'auto',
+              height: 'auto'
+            });
+     	},300);
+    }
 
     $('html, body').css({
         overflow: 'hidden',
